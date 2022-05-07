@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Droga Fácil | Home</title>
+</head>
+<body class="container" style="background-color: #343A40;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand btn text-light" href="/">
+                    Droga Fácil
+                </a>
+                <ul class="navbar-nav">
+                    <li class="me-2 nav-item">
+                        <a class="nav-link btn text-light" href="/" style="background-color: #184E77;">Home</a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link btn text-light" href="/listar" style="background-color: #184E77;">Produtos</a>
+                    </li>
+                    <li class="me-4 nav-item">
+                        <a class="nav-link btn text-light" href="/novo" style="background-color: #184E77;">Cadastrar</a>
+                    </li>
+                    <li>
+                        <a class="btn text-light" href="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M4,18v-0.65c0-0.34,0.16-0.66,0.41-0.81C6.1,15.53,8.03,15,10,15c0.03,0,0.05,0,0.08,0.01c0.1-0.7,0.3-1.37,0.59-1.98 C10.45,13.01,10.23,13,10,13c-2.42,0-4.68,0.67-6.61,1.82C2.51,15.34,2,16.32,2,17.35V20h9.26c-0.42-0.6-0.75-1.28-0.97-2H4z"/><path d="M10,12c2.21,0,4-1.79,4-4s-1.79-4-4-4C7.79,4,6,5.79,6,8S7.79,12,10,12z M10,6c1.1,0,2,0.9,2,2s-0.9,2-2,2 c-1.1,0-2-0.9-2-2S8.9,6,10,6z"/><path d="M20.75,16c0-0.22-0.03-0.42-0.06-0.63l1.14-1.01l-1-1.73l-1.45,0.49c-0.32-0.27-0.68-0.48-1.08-0.63L18,11h-2l-0.3,1.49 c-0.4,0.15-0.76,0.36-1.08,0.63l-1.45-0.49l-1,1.73l1.14,1.01c-0.03,0.21-0.06,0.41-0.06,0.63s0.03,0.42,0.06,0.63l-1.14,1.01 l1,1.73l1.45-0.49c0.32,0.27,0.68,0.48,1.08,0.63L16,21h2l0.3-1.49c0.4-0.15,0.76-0.36,1.08-0.63l1.45,0.49l1-1.73l-1.14-1.01 C20.72,16.42,20.75,16.22,20.75,16z M17,18c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S18.1,18,17,18z"/></g></g></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="mt-4">
+        <div class="text-light text-center">
+            <h1>Cadastrar produto</h1>
+        </div>
+        <div class="mt-5 container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <img src="../../public/assets/box.svg" alt="box">
+                </div>
+                <div class="col-6 text-light">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col-6">
+                                <label for="product-code" class="form-label">Código</label>
+                                <input type="text" class="form-control" id="product-code" placeholder="Ex.: 99999">
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="product-category" class="form-label">Categoria</label>
+                                <select class="form-select" id="product-category">
+                                    <option value="" selected disabled>Selecione uma categoria</option>
+                                    <option value="1">Higiene Pessoal</option>
+                                    <option value="2">Medicamentos</option>
+                                    <option value="3">Suplementos vitaminicos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="product-name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="product-name" placeholder="Ex.: neosaldina">
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col-6">
+                                <label for="product-price" class="form-label">Preço</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">R$</span>
+                                    <input type="text" id="product-price" class="form-control" placeholder="0,00">
+                                </div>
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="product-quatity" class="form-label">Quantidade</label>
+                                <input type="number" class="form-control" id="product-quatity" min="0" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="product-details" class="form-label">Observações</label>
+                            <textarea class="form-control" id="product-details" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
