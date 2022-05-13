@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-class IndexController
+namespace App\Controller;
+
+class IndexController extends AbstractController
 {
     public function home(): void
     {
-        echo 'Página inicial';
+        parent::render('index/home');
     }
 }

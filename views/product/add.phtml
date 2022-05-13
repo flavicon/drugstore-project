@@ -1,0 +1,58 @@
+<div class="text-light text-center">
+    <h1>Cadastrar produto</h1>
+</div>
+<div class="mt-5 container">
+    <div class="row align-items-center">
+        <div class="col-6">
+            <img src="../assets/ic_drug.svg" alt="box">
+        </div>
+        <div class="col-6">
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="product-code" class="form-label">Código</label>
+                        <input type="text" class="form-control" id="product-code" placeholder="Ex.: 99999">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="product-category" class="form-label">Categoria</label>
+                        <div class="input-group">
+                            <select class="form-select" id="product-category">
+                                <option value="" selected disabled>Selecione uma categoria</option>
+                                <option value="1">Higiene Pessoal</option>
+                                <option value="2">Medicamentos</option>
+                                <option value="3">Suplementos vitaminicos</option>
+                            </select>
+                            <a 
+                                href="/novo-categoria" 
+                                class="btn btn-primary"
+                                style="background-color: #184E77;"
+                            >Adicionar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="product-name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="product-name" placeholder="Ex.: neosaldina">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="product-price" class="form-label">Preço</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">R$</span>
+                            <input type="text" id="product-price" class="form-control" placeholder="0,00">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="product-quatity" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control" id="product-quatity" min="0" placeholder="0">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="product-details" class="form-label">Observações</label>
+                    <textarea class="form-control" id="product-details" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
-class ErrorController
+namespace App\Controller;
+
+class ErrorController extends AbstractController
 {
     public function notFound(): void
     {
-        echo 'Página não encontrada';
+        parent::render('error/notFound');
     }
 }
