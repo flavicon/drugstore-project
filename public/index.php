@@ -8,14 +8,17 @@ use App\Controller\CategoryController;
 use App\Controller\ProductController;
 use App\Controller\ErrorController;
 use App\Controller\IndexController;
+use App\Controller\UserController;
 
 $url = $_SERVER['REQUEST_URI'];
 
 match($url) {
     '/' => (new IndexController)->home(),
     '/listar-categoria' => (new CategoryController())->list(),
-    '/novo-categoria' => (new CategoryController())->add(),
     '/listar-produtos' => (new ProductController())->list(),
+    '/listar-usuarios' => (new UserController)->list(),
+    '/novo-categoria' => (new CategoryController())->add(),
     '/novo-produto' => (new ProductController())->add(),
+    '/novo-usuario' => (new UserController())->add(),
     default => (new ErrorController())->notFound(),
 };
