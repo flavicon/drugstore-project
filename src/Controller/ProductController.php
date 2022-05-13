@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-class ProductController
-{
-    public function add(): void
-    {
-        echo 'Página de cadastro produto';
-    }
+namespace App\Controller;
 
+class ProductController extends AbstractController
+{
     public function list(): void
     {
-        echo 'Página de listagem produto';
+        parent::render('product/list');
+    }
+
+    public function add(): void
+    {
+        parent::render('product/add');
     }
 }

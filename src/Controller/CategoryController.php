@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-class CategoryController
-{
-    public function add(): void
-    {
-        echo 'página de categoria';
-    }
+namespace App\Controller;
 
+class CategoryController extends AbstractController
+{
     public function list(): void
     {
-        echo 'lista de categorias';
+        parent::render('category/list');
+    }
+
+    public function add(): void
+    {
+        parent::render('category/add');
     }
 }
