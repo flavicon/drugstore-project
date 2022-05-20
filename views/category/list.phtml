@@ -1,7 +1,27 @@
+<h2>Categorias</h2>
+<hr>
+
+<div class="text-end mb-3">
+    <a class="btn btn-light" href="/categorias/pdf">Gerar PDF</a>
+</div>
+
 <table class="table table-hover table-striped">
     <tr class="table-dark">
         <th>#ID</th>
         <th>Nome</th>
-        <th>AlgumaCoisa</th>
+        <th>Descrição</th>
     </tr>
+    <tbody class="table-light">
+        <?php
+            foreach ($data['categories'] as $id => $category) {
+                echo "
+                    <tr>
+                        <td>{$category->getId()}</td>
+                        <td>{$category->getName()}</td>
+                        <td>{$category->getDescription()}</td>
+                    </tr>
+                ";
+            }
+        ?>
+    </tbody>
 </table>

@@ -14,7 +14,8 @@ $url = $_SERVER['REQUEST_URI'];
 
 match($url) {
     '/' => (new IndexController)->home(),
-    '/listar-categoria' => (new CategoryController())->list(),
+    '/categorias' => (new CategoryController())->list(),
+    '/categorias/pdf' => (new CategoryController())->pdf(),
     '/listar-produtos' => (new ProductController())->list(),
     '/listar-usuarios' => (new UserController)->list(),
     '/novo-categoria' => (new CategoryController())->add(),
