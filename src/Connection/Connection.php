@@ -20,7 +20,7 @@ class Connection
 
         $paths = [dirname(__DIR__).'/Model'];
 
-        $config = ORMSetup::createAnnotationMetadataConfiguration($paths, true);
+        $config = ORMSetup::createAttributeMetadataConfiguration($paths, true);
 
         return EntityManager::create($params, $config);
     }

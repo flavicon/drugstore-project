@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Connection\Connection;
+use App\Model\User;
+
 class UserController extends AbstractController
 {
     public function add(): void
@@ -13,6 +16,10 @@ class UserController extends AbstractController
 
     public function list(): void
     {
-        parent::render('/user/list');
+        $con = Connection::open();
+
+        $data = $con->getRepository(User::class)->findAll();
+
+        parent::render('/user/list', $data);
     }
 }
