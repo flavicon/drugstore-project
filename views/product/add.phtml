@@ -7,7 +7,7 @@
             <img src="../assets/ic_drug.svg" alt="box">
         </div>
         <div class="col-6">
-            <form>
+            <form action="" method="POST">
                 <div class="row">
                     <div class="mb-3 col-6">
                         <label for="product-code" class="form-label">Código</label>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="product-name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="product-name" placeholder="Ex.: neosaldina">
+                    <input type="text" class="form-control" name="product-name" id="product-name" placeholder="Ex.: neosaldina">
                 </div>
                 <div class="row">
                     <div class="mb-3 col-6">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="product-details" class="form-label">Observações</label>
-                    <textarea class="form-control" id="product-details" rows="3"></textarea>
+                    <textarea class="form-control" name="product-details" id="product-details" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
             </form>

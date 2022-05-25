@@ -6,8 +6,9 @@
     },
     "require": {
         "dompdf/dompdf": "^1.2",
-        "doctrine/orm": "^2.12",
+        "doctrine/orm": "^2.9",
         "doctrine/annotations": "^1.13",
-        "symfony/cache": "^6.0"
+        "symfony/cache": "^6.0",
+        "doctrine/dbal": "^3.3"
     }
 }
