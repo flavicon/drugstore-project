@@ -4,7 +4,7 @@ namespace App\Controller;
 
 abstract class AbstractController
 {
-    public function render(string $viewName): void
+    public function render(string $viewName, array $data=[]): void
     {
         include '../views/_templates/head.phtml';
         include "../views/{$viewName}.phtml";
